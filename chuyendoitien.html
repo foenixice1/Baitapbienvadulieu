@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        sl1 {
+           ;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+
+    </tr>
+    <tr>
+        <td><input type="text" id="tien"></td>
+        <td>
+            <select name="" id="sl1" style="width: 100px" >
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select name="" id="sl2" style="width: 100px">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td style="background: blue">
+            <button onclick="nhaptien()">Convert</button>
+        </td>
+    </tr>
+
+</table>
+<p id="hienthi" style="color: blue">Result</p>
+<script>
+    function nhaptien() {
+        let tienvao = document.getElementById("tien").value ;
+        let sl1 = document.getElementById("sl1").value ;
+        let sl2 = document.getElementById("sl2").value ;
+        if ( sl1 == sl2 ) {
+            document.getElementById("hienthi").innerHTML='Result : '+ tienvao + 'VND';
+        }
+        if ( sl1 == "VND" && sl2 == "USD") {
+            document.getElementById("hienthi").innerHTML='Result : '+ tienvao/23000 + 'USD';
+        }
+        if ( sl1 == "USD" && sl2 == "VND") {
+            document.getElementById("hienthi").innerHTML='Result : '+ tienvao*23000 + 'VND';
+        }
+
+    }
+</script>
+</body>
+</html>
