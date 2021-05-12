@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<h1>Caculator</h1>
+<body>
+<input type="text"  id="dong1">
+<input type="text"  id="dong2"><br>
+<button onclick="cong()">Addition(+)</button>
+<button onclick="tru()">Addition(-)</button>
+<button onclick="nhan()">Addition(*)</button>
+<button onclick="chia()">Addition(/)</button>
+</body>
+<p id="ketqua">Kết quả là : </p>
+<script>
+  function cong(){
+    let dong1 = document.getElementById("dong1").value ;
+    let dong2 = document.getElementById("dong2").value ;
+    let T = +dong1 + +dong2 ;
+    document.getElementById("ketqua").innerHTML= 'Kết quả là : ' + T ;
+  }
+  function tru(){
+    let dong1 = document.getElementById("dong1").value ;
+    let dong2 = document.getElementById("dong2").value ;
+    let T = +dong1 - +dong2 ;
+    document.getElementById("ketqua").innerHTML= 'Kết quả là : ' + T ;
+  }
+  function nhan(){
+    let dong1 = document.getElementById("dong1").value ;
+    let dong2 = document.getElementById("dong2").value ;
+    let T = +dong1 * +dong2 ;
+    document.getElementById("ketqua").innerHTML= 'Kết quả là : ' + T ;
+  }
+  function chia(){
+    let dong1 = document.getElementById("dong1").value ;
+    let dong2 = document.getElementById("dong2").value ;
+    let T = +dong1 / +dong2 ;
+    document.getElementById("ketqua").innerHTML= 'Kết quả là : ' + T ;
+  }
+
+
+</script>
+</html>
